@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ContactApp">
   <head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <meta charset="utf-8">
-    <title>Todo MVC</title>
+    <title>TodoMVC</title>
   </head>
   <body>
-
+    <div class="container">
+      <div>
+        <form name="ContactForm">
+          <div class="form-group">
+            <label>TODO MVC</label>
+            <input type="text" name="conver" class="form-control" placeholder="What need to be done??"><br>
+            <button type="button" class="btn btn-primary">ADD CONTACT</button>
+          </div>
+        </form>
+      </div>
+      <div >
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Text</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td><input type="checkbox" ></td>
+                <td> </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
