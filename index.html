@@ -29,7 +29,7 @@
               <tr ng-repeat='text in title_index' >
                 <td><input type="checkbox" ng-model="text.done" ng-click="check($index)"></td>
                 <td>{{text.title}}</td>
-                <td ng-if="text.done">{{text.done}}</td>
+                <td ng-if="text.done">Complete</td>
               </tr>
             </tbody>
           </table>
