@@ -1,5 +1,5 @@
 angular.module('TodoApp', [])
-.service('contactService', function(){
+.service('TodoService', function(){
   var self = this
 
   self.title_index = [{title: 'text1', done: true},
@@ -9,20 +9,20 @@ angular.module('TodoApp', [])
     return self.title_index;
   }
 
-  self.add = function(contact){
-    self.title_index.push(contact);
+  self.add = function(titles){
+    self.title_index.push(titles);
   }
 })
 
-.controller('ListTodoController', function($scope, TitleService){
-    $scope.title_index = TitleService.list();
+.controller('ListTodoController', function($scope, TodoService){
+    $scope.title_index = TodoService.list();
 })
 
-.controller('AddTitleController', function($scope, TitleService){
+.controller('AddTodoController', function($scope, TodoService){
 
     $scope.save = function () {
       var titles = {title: $scope.title, done: false }
-      contactService.add(titles);
+      TodoService.add(titles);
       resetForm();
     }
     function resetForm() {
