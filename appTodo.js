@@ -12,10 +12,22 @@ angular.module('TodoApp', [])
   self.add = function(titles){
     self.title_index.push(titles);
   }
+
+  self.changedata = function(index){
+    if(self.title_index[i].done === false){
+       self.title_index[i].done = true;
+    } else {
+      self.title_index[i].done = false;
+    }
+  }
 })
 
 .controller('ListTodoController', function($scope, TodoService){
     $scope.title_index = TodoService.list();
+
+    $scope.check = function(i){
+      TodoService.changedata(i);
+    }
 })
 
 .controller('AddTodoController', function($scope, TodoService){
