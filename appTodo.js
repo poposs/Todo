@@ -14,7 +14,7 @@ angular.module('TodoApp', [])
   }
 })
 
-.controller('ListTitleController', function($scope, TitleService){
+.controller('ListTodoController', function($scope, TitleService){
     $scope.title_index = TitleService.list();
 })
 
